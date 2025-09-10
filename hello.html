@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: url(https://i.pinimg.com/736x/63/e4/7f/63e47f485831c04e53579913bda4f2ae.jpg) no-repeat center center/cover;
+            color: #fff;
+        }
+
+        .section-1 {
+            height: auto;
+            width: 100%;
+            text-align: center;
+            margin-top: 3rem;
+            padding: 0 10px;
+        }
+
+        .heading_1 {
+            font-size: 3rem;
+            color: rgb(200, 200, 200);
+            text-shadow: 2px 2px 8px rgb(38, 0, 255);
+        }
+
+        @media (max-width: 768px) {
+            .heading_1 {
+                font-size: 2rem;
+            }
+        }
+
+        .ring {
+            position: relative;
+            margin: 3em auto;
+            width: 180px;
+            height: 180px;
+            background: transparent;
+            border: 3px solid #3c3c3c;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 150px;
+            text-shadow: 0 0 10px #fff000;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+        }
+
+        .ring img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ring:before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-top: 3px solid #fff000;
+            border-right: 3px solid #ffee00;
+            border-radius: 50%;
+            animation: animateC 2s linear infinite;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            top: calc(50% - 2px);
+            left: 50%;
+            width: 50%;
+            height: 4px;
+            background: transparent;
+            transform-origin: left;
+            animation: animate 2s linear infinite;
+        }
+
+        span:before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ffee00;
+            top: -6px;
+            right: -8px;
+            box-shadow: 0 0 20px #fff000;
+        }
+
+        @keyframes animateC {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(45deg);
+            }
+
+            100% {
+                transform: rotate(405deg);
+            }
+        }
+
+        /* Image Section */
+        .imd {
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .imd img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        /* Poems Section */
+        .one-s {
+            margin-top: 50px;
+            display: flex;
+            gap: 20px;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        .one-s-1,
+        .one-s-2 {
+            flex: 1 1 45%;
+            color: rgb(195, 121, 2);
+            padding: 1.5em;
+            text-align: center;
+            line-height: 1.8rem;
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow:
+                0 0 15px rgba(0, 123, 255, 0.6),
+                0 0 30px rgba(0, 123, 255, 0.4),
+                inset 0 0 20px rgba(0, 123, 255, 0.3);
+            transition: 0.3s;
+            min-width: 280px;
+        }
+
+        .one-s-1:hover,
+        .one-s-2:hover {
+            box-shadow:
+                0 0 25px rgba(0, 123, 255, 0.9),
+                0 0 50px rgba(0, 123, 255, 0.7),
+                inset 0 0 25px rgba(0, 123, 255, 0.5);
+            color: rgb(238, 151, 10);
+        }
+
+        @media (max-width: 768px) {
+            .one-s {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .one-s-1,
+            .one-s-2 {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+
+
+        footer{
+            margin-bottom: 100px;
+            margin-top: 100px;
+        }
+
+        .insta-link {
+            font-size: 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            box-shadow: 0 0 15px rgba(255, 100, 200, 0.7);
+            transition: 0.3s;
+
+        }
+
+        .insta-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 100, 200, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section-1">
+        <h1 class="heading_1" data-aos="fade-up" data-aos-duration="2000">
+            welcome to my poems world
+        </h1>
+    </section>
+
+    <div class="ring">
+        <img src="https://i.pinimg.com/474x/15/50/e2/1550e2a6a638264a02f271bd6300b2bf.jpg" alt="" height="100%"
+            width="100%">
+        <span></span>
+    </div>
+
+    <div class="imd">
+        <img src="./mombtti.gif" alt="" height="100%" width="100%">
+    </div>
+    <!-- ===================================================== -->
+
+    <section class="one-s">
+        <div class="one-s-1">
+            <h3>
+                Ki ab jo tum baag e chaman hamara chhod rahe ho,
+                Humne kiya kya tumhare liye
+                Y keh chuke ho
+                To tum khizaan e naadina ho e dost
+                Jisne dekhi ho pasti
+                Tum wo urooj nahi e dost
+                Ek arse k talluq ke baad
+                Ye sb sehna padega
+                Tum gair ho
+                Na chahkar bhi y kehna padega
+            </h3>
+        </div>
+        <div class="one-s-2">
+            <h3>
+                I looked for signs in stars and skies,
+                In waves, in trees, in passerby.
+                I thought He’d speak in something loud,
+                A flash of light, a voice, a parting cloud.
+                But what I found was something small—
+                A quiet feeling, that was all.
+                I found quiet peace—
+                A calm that made my questions cease.
+                No grand reply, no sudden sign, no big reveal
+                Just a small whisper:
+                “I’ve always been the One.”
+            </h3>
+        </div>
+    </section>
+
+
+    <!-- ====== Footer / Instagram Section ====== -->
+    <footer style="margin-top: 60px; text-align:center; padding:20px;">
+        <a href="https://www.instagram.com/captureandwrite25/?igsh=enhrZXpranRta2E1#" target="_blank" class="insta-link">
+            <i class="fab fa-instagram"></i> Follow me on Instagram
+        </a>
+    </footer>
+
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
